@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <mapped-superclass name="ScnSocialAuth\Entity\UserProvider" table="user_provider">
+    <id name="providerId" type="string" column="provider_id" unique="true" />
+    <id name="userId" type="integer" column="user_id" />
+    <field name="provider" type="string" column="provider" length="255" nullable="false" unique="true"/>
+    
+  </mapped-superclass>
+</doctrine-mapping>

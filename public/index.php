@@ -9,4 +9,6 @@ chdir(dirname(__DIR__));
 require 'init_autoloader.php';
 
 // Run the application!
-Zend\Mvc\Application::init(require 'config/application.config.php')->run();
+$application = Zend\Mvc\Application::init(require 'config/application.config.php');
+$application->getRequest()->setBaseUrl('/sf/');
+$application->run();
